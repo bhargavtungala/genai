@@ -1,0 +1,12 @@
+{
+    "graphs": {
+
+        "first": "./first.py:graph",
+        "llm": "./basic_llm.py:graph",
+        "llm2": "./llm_interaction.py:graph",
+        "tools": "./tools.py:graph"
+
+        
+    },
+    "dependencies": ["."]
+}
