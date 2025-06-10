@@ -59,11 +59,11 @@ tool_node=ToolNode([add,sub,mul,div])
 prompt=SystemMessage("you are an arthemetic agent who uses tools")
 agent= create_react_agent(model=gemini_llm, tools=tool_node, prompt=prompt)
 
-# stategraph = StateGraph(MessagesState)
+stategraph = StateGraph(MessagesState)
 
-# stategraph.add_node("agent", agent)
-# stategraph.add_edge(START, "agent")
-# stategraph.add_edge("agent", END)
+stategraph.add_node("agent", agent)
+stategraph.add_edge(START, "agent")
+stategraph.add_edge("agent", END)
 
-# graph = stategraph.compile()
+graph = stategraph.compile()
 graph=agent
