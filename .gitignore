@@ -1,7 +1,45 @@
-echo ".venv/
+# Virtual environment folders
+.venv/
+venv/
+env/
+myenv/
+
+# Python virtual environment config file
+pyvenv.cfg
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+
+# Environments
 .env
- myenv/
+.venv
+.myenv
+myenv/
+myenv.bak/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings (optional)
+.vscode/
+
+# macOS files
 .DS_Store
-.ipynb_checkpoints/" > .gitignore
+
+# Windows files
+Thumbs.db
