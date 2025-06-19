@@ -1,3 +1,7 @@
-#Environments
-.venv/
-myenv/
+echo ".venv/
+__pycache__/
+*.pyc
+.env
+ myenv/
+.DS_Store
+.ipynb_checkpoints/" > .gitignore
