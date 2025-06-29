@@ -3,6 +3,7 @@
 venv/
 env/
 myenv/
+jiraenv/
 
 # Python virtual environment config file
 pyvenv.cfg
@@ -25,12 +26,15 @@ pip-log.txt
 .env
 .venv
 .myenv
+.jiraenv
 myenv/
 myenv.bak/
 env/
 ENV/
+jiraenv/
 env.bak/
 venv.bak/
+jiraenv.bak/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
