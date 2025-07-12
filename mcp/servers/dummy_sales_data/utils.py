@@ -22,23 +22,6 @@ from typing import Union
 #     )
 #     return connection
 
-def get_database_connection():
-    load_dotenv()
-    connection = mysql.connector.connect(
-        host=os.getenv('MYSQL_HOST', 'mysql'),  # Default to 'mysql'
-        user=os.getenv('MYSQL_USER', 'qtgenai'),
-        password=os.getenv('MYSQL_PASSWORD', 'qtgenai'),
-        database=os.getenv('MYSQL_DATABASE', 'genaicommerce')
-    )
-    return connection
-
-
-
-
-
-
-
-
 
 # if __name__ == '__main__':
 #     connection = get_database_connection()
@@ -53,8 +36,38 @@ def get_database_connection():
 #     # insert_product_sql = f"INSERT INTO products (name, description, price, stock_quantity, category_id, image_url) VALUES ('{name}', '{description}', {price}, {stock_quantity}, {category_id}, '{image_url}')"
 #     # cursor.execute(insert_product_sql)
 #     # connection.commit()
-#     latest_product_sql = 'SELECT * FROM `products` ORDER BY product_id DESC LIMIT 1;'
-#     cursor.execute(latest_product_sql)
-#     products = cursor.fetchall()
-#     for product in products:
-#         print(product)
+#     # latest_product_sql = 'SELECT * FROM `products` ORDER BY product_id DESC LIMIT 1;'
+#     # cursor.execute(latest_product_sql)
+#     # products = cursor.fetchall()
+#     # for product in products:
+#     #     print(product)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def get_database_connection():
+    load_dotenv()
+    host = os.getenv('MYSQL_HOST')
+    user = os.getenv('MYSQL_USER')
+    password = os.getenv('MYSQL_PASSWORD')
+    database = os.getenv('MYSQL_DATABASE')
+    
+    print(f"Connecting to MySQL: host={host}, user={user}, db={database}")
+    
+    connection = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database
+    )
+    return connection
